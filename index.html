@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>扫描二维码</title>
+    <!-- 引入 QRCode.js 库 -->
+    <script src="https://cdn.jsdelivr.net/npm/qrcodejs/qrcode.min.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+        #qrcode {
+            margin: 20px auto;
+            width: 300px;
+            height: 300px;
+        }
+    </style>
+</head>
+<body>
+    <h1>扫描二维码跳转到广告页面</h1>
+    <div id="qrcode"></div>
+    <p>使用手机扫描二维码，跳转到广告页面。</p >
+
+    <script>
+        // 广告页面的URL
+        const adPageUrl = "https://instancehospitalitysurmise.com/nkn2hz3w?key=001d2a54cce36e0e2a865f7434309a38/ad.html"; // 替换为你的广告页面URL
+
+        // 生成二维码
+        const qrcode = new QRCode(document.getElementById("qrcode"), {
+            text: adPageUrl,
+            width: 300,
+            height: 300
+        });
+    </script>
+</body>
+</html>
